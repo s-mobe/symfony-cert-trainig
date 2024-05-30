@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DOCKER_SERVICE=php
+
+if [ -n "${1}" ]; then
+    docker-compose exec ${DOCKER_SERVICE} /bin/bash -c "${COMMAND} $(printf -- '"%s" ' "${@}")"
+else
+    docker-compose exec ${DOCKER_SERVICE} /bin/bash
+fi

@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+
+
+    php:
+        image: php:8.2.19-fpm
+        #        build:
+        #            context: .
+        #            dockerfile: ./docker/php/Dockerfile
+        environment:
+            - DOCKER_HOST_WORKING_DIR=${PWD}
+        volumes:
+            - ./docker/php/php-overrides.ini:/usr/local/etc/php/conf.d/php-overrides.ini
+            - .:/var/www/html:cached
+        extra_hosts:
+            - "host.docker.internal:host-gateway"

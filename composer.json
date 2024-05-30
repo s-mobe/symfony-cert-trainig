@@ -1,0 +1,26 @@
+{
+    "name": "certificationy/certificationy-cli",
+    "type": "library",
+    "description": "A CLI tool to train certifications",
+    "homepage": "http://github.com/certificationy/certificationy-cli",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "symfony/console": "^4.4 || ^5.4 || ^6.0",
+        "certificationy/certificationy": "^2.0",
+        "symfony/yaml": "^4.4 || ^5.4 || ^6.0",
+        "certificationy/symfony-pack": "^1.4",
+        "certificationy/php-pack": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {"Certificationy\\Cli\\": "src"}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
